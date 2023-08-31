@@ -9,16 +9,16 @@ const Contact = () => {
         </div>
         
         <div className="mb-3">
-          <input type="text" placeholder='Your Name' class="form-control" />
+          <input type="text" placeholder='Your Name' className="form-control" />
         </div>
         <div className="mb-3">
-          <input type="email" placeholder='Your email' class="form-control" aria-describedby="emailHelp" />
+          <input type="email" placeholder='Your email' className="form-control" aria-describedby="emailHelp" />
         </div>
         <div className="mb-3">
         <textarea className="form-control" placeholder="Message" required ></textarea>
         </div>
         <div className="mb-3">
-        <button type="submit" class="form-control btn btn-block btn-primary">Send Now</button>
+        <button type="submit" className="form-control btn btn-block btn-primary">Send Now</button>
         </div>
         
       </form>

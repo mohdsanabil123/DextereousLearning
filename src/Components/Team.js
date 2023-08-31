@@ -16,7 +16,7 @@ const Team = () => {
                         <p className="card-text">Some quick example text to build on the card</p>
                     </div>
                     <div>
-                    <Link to="/" className="fa fa-facebook"></Link>
+                    <i className="fa-brands fa-facebook"></i>
                     <Link to="/" className="fa fa-twitter"></Link>
                     <Link to="/" className="fa fa-linkedin"></Link>
                     </div>

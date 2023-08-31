@@ -5,6 +5,7 @@ const Registration = () => {
         <div className='container custom-margin'>
             <div className="col-lg-5 mx-auto border rounded">
                 <div className="col-lg-10 mx-auto p-3">
+                <h6 className="mt-0 text-center"><span className='text-danger'>Dextereous</span> Learning</h6>
                     <h2 className="my-3 text-center">Student Registration</h2>
                     <form>
                         <div className="form-group">

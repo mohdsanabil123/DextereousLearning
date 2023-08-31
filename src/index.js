@@ -10,6 +10,7 @@ import Home from './Components/Home';
 import Login from './Components/Login';
 import About from './Components/About';
 import Contact from './Components/Contact';
+import Dashboard from './Components/Dashboard';
 
 // import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
@@ -48,9 +49,14 @@ const router = createBrowserRouter([
       {
         path: '/contact',
         element: <Contact/>
+      },
+      {
+        path: '/dashboard',
+        element: <Dashboard/>
       }
-    ]
+    ] 
   }
+  
 ])
 
 // createRoot(document.getElementById("root")).render(
