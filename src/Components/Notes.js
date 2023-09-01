@@ -24,7 +24,7 @@ const Notes = () => {
                     <div className="card mx-auto" style={{ width: "auto" }} >
                         <img src={chemistry} height='120px' className="card-img-top" alt="..." />
                         <div className="card-body">
-                            <h5 className="card-title">Physics Notes</h5>
+                            <h5 className="card-title">Chemistry Notes</h5>
                             <p className="card-text">Some quick example text.</p>
                             <a href="/" className="btn btn-sm btn-primary">See Notes</a>
                         </div>
@@ -34,7 +34,7 @@ const Notes = () => {
                     <div className="card mx-auto" style={{ width: "auto" }} >
                         <img src={math} height='120px' className="card-img-top" alt="..." />
                         <div className="card-body">
-                            <h5 className="card-title">Physics Notes</h5>
+                            <h5 className="card-title">Maths Notes</h5>
                             <p className="card-text">Some quick example text.</p>
                             <a href="/" className="btn btn-sm btn-primary">See Notes</a>
                         </div>
@@ -44,7 +44,7 @@ const Notes = () => {
                     <div className="card mx-auto" style={{ width: "auto" }} >
                         <img src={note} height='120px' className="card-img-top" alt="..." />
                         <div className="card-body">
-                            <h5 className="card-title">Physics Notes</h5>
+                            <h5 className="card-title">Biology Notes</h5>
                             <p className="card-text">Some quick example text.</p>
                             <a href="/" className="btn btn-sm btn-primary">See Notes</a>
                         </div>

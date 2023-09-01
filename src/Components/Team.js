@@ -13,12 +13,12 @@ const Team = () => {
                     <img src={image}  className="img-fluid rounded-circle mx-auto mt-3" alt="..." />
                     <div className="card-body">
                         <h5 className="card-title text-center">Mohd Sanabil</h5>
-                        <p className="card-text">Some quick example text to build on the card</p>
+                        <p className="card-text">An Engineer</p>
                     </div>
                     <div>
-                    <i className="fa-brands fa-facebook"></i>
-                    <Link to="/" className="fa fa-twitter"></Link>
-                    <Link to="/" className="fa fa-linkedin"></Link>
+                    <Link to="/" ><i class="fa-brands fa-facebook"></i></Link>
+                    <Link to="/" ><i class="fa-brands fa-linkedin-in"></i></Link>
+                    <Link to="/" ><i class="fa-brands fa-twitter"></i></Link>
                     </div>
                 </div>
                 </div>
@@ -28,13 +28,13 @@ const Team = () => {
                 <div className="card mx-auto" style={{ width: "auto" }} >
                     <img src={image}  className="img-fluid rounded-circle mx-auto mt-3" alt="..." />
                     <div className="card-body">
-                        <h5 className="card-title text-center">Mohd Sanabil</h5>
-                        <p className="card-text">Some quick example text to build on the card</p>
+                        <h5 className="card-title text-center">Abdul Qadir</h5>
+                        <p className="card-text">An Engineer</p>
                     </div>
                     <div>
-                    <Link to="/" className="fa fa-facebook"></Link>
-                    <Link to="/" className="fa fa-twitter"></Link>
-                    <Link to="/" className="fa fa-linkedin"></Link>
+                    <Link to="/" ><i class="fa-brands fa-facebook"></i></Link>
+                    <Link to="/" ><i class="fa-brands fa-linkedin-in"></i></Link>
+                    <Link to="/" ><i class="fa-brands fa-twitter"></i></Link>
                     </div>
                 </div>
                 </div>
@@ -43,13 +43,13 @@ const Team = () => {
                 <div className="card mx-auto" style={{ width: "auto" }} >
                     <img src={image} className="img-fluid rounded-circle mx-auto mt-3" alt="..." />
                     <div className="card-body">
-                        <h5 className="card-title text-center">Mohd Sanabil</h5>
-                        <p className="card-text">Some quick example text to build on the card</p>
+                        <h5 className="card-title text-center">Nihal Ahmad</h5>
+                        <p className="card-text">A Doctor</p>
                     </div>
                     <div>
-                    <Link to="/" className="fa fa-facebook"></Link>
-                    <Link to="/" className="fa fa-twitter"></Link>
-                    <Link to="/" className="fa fa-linkedin"></Link>
+                    <Link to="/" ><i class="fa-brands fa-facebook"></i></Link>
+                    <Link to="/" ><i class="fa-brands fa-linkedin-in"></i></Link>
+                    <Link to="/" ><i class="fa-brands fa-twitter"></i></Link>
                     </div>
                 </div>
                 </div>
@@ -58,13 +58,13 @@ const Team = () => {
                 <div className="card mx-auto" style={{ width: "auto" }} >
                     <img src={image} className="img-fluid rounded-circle mx-auto mt-3" alt="..." />
                     <div className="card-body">
-                        <h5 className="card-title text-center">Mohd Sanabil</h5>
-                        <p className="card-text">Some quick example text to build on the card</p>
+                        <h5 className="card-title text-center">Mohd Mumtaz</h5>
+                        <p className="card-text">An Engineer</p>
                     </div>
                     <div>
-                    <Link to="/" className="fa fa-facebook"></Link>
-                    <Link to="/" className="fa fa-twitter"></Link>
-                    <Link to="/" className="fa fa-linkedin"></Link>
+                    <Link to="/" ><i class="fa-brands fa-facebook"></i></Link>
+                    <Link to="/" ><i class="fa-brands fa-linkedin-in"></i></Link>
+                    <Link to="/" ><i class="fa-brands fa-twitter"></i></Link>
                     </div>
                 </div>
                 </div>

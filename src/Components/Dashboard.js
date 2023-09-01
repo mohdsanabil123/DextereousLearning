@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const Dashboard = () => {
 
-  const [isOpen, setOpen] = useState(true);
+  const [isOpen, setOpen] = useState(false);
   const toggle = () => {
     setOpen( ! isOpen );
   }
@@ -14,7 +14,7 @@ const Dashboard = () => {
         <div style={{width: isOpen ? "200px" : "50px" }} className="col-lg-2 col-2 bg-dark sidebar">
           <div className='d-flex mt-3'>
             <h5 style={{display: isOpen ? "block" : "none" }}>Dashboard</h5>
-            <i class="fa-solid fa-bars toggle" onClick={toggle}></i>
+            <i className="fa-solid fa-bars toggle" onClick={toggle}></i>
           </div>
             <ul className=''>
               <li><i className="fa-solid fa-house"></i><Link style={{display: isOpen ? "block" : "none" }} className='link'>Home</Link></li>

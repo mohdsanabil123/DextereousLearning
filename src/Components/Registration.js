@@ -20,7 +20,7 @@ const Registration = () => {
                             <div className="col-md-6 mt-md-0 mt-3">
                                 <label>Gender</label>
                                 <select id="inputState" className="form-select">
-                                    <option selected>Male</option>
+                                    <option>Male</option>
                                     <option>Female</option>
                                     <option>Other</option>
                                 </select>
