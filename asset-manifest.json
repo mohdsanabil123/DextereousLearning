@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/DextereousLearning/static/css/main.27ed5252.css",
+    "main.js": "/DextereousLearning/static/js/main.1c55a152.js",
+    "static/js/787.2eaf7baa.chunk.js": "/DextereousLearning/static/js/787.2eaf7baa.chunk.js",
+    "static/media/about.jpg": "/DextereousLearning/static/media/about.19d23f46ff49e3a4ac57.jpg",
+    "static/media/banner.jpg": "/DextereousLearning/static/media/banner.e3016554171dfe37dae7.jpg",
+    "static/media/note.png": "/DextereousLearning/static/media/note.951e3f3c556af936f37d.png",
+    "static/media/math.png": "/DextereousLearning/static/media/math.c01aee98badf7b68c4dc.png",
+    "static/media/physics.png": "/DextereousLearning/static/media/physics.a83a9b5b20a9e19d79d9.png",
+    "static/media/Chemistry.png": "/DextereousLearning/static/media/Chemistry.7fcdf1b7aefbf68a74ba.png",
+    "static/media/team-1.jpg": "/DextereousLearning/static/media/team-1.8a9a675dfa533bd205a3.jpg",
+    "index.html": "/DextereousLearning/index.html",
+    "main.27ed5252.css.map": "/DextereousLearning/static/css/main.27ed5252.css.map",
+    "main.1c55a152.js.map": "/DextereousLearning/static/js/main.1c55a152.js.map",
+    "787.2eaf7baa.chunk.js.map": "/DextereousLearning/static/js/787.2eaf7baa.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.27ed5252.css",
+    "static/js/main.1c55a152.js"
+  ]
+}
