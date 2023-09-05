@@ -12,7 +12,6 @@ import About from './Components/About';
 import Contact from './Components/Contact';
 import Dashboard from './Components/Dashboard';
 
-// import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import reportWebVitals from './reportWebVitals';
@@ -58,10 +57,6 @@ const router = createBrowserRouter([
   }
   
 ])
-
-// createRoot(document.getElementById("root")).render(
-//   <RouterProvider router={router} />
-// );
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
