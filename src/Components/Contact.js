@@ -3,6 +3,7 @@ import React from 'react'
 const Contact = () => {
   return (
     <div className='container custom-margin'>
+      <div className="row">
       <form>
         <div className="mb-5 text-center">
           <h1>Contact Us</h1>
@@ -22,6 +23,7 @@ const Contact = () => {
         </div>
         
       </form>
+      </div>
     </div>
   )
 }

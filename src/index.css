@@ -1,14 +1,15 @@
+body {
+  font-family: cursive;
+}
+
+.active{
+  font-weight: bold;
+  border-bottom: 2px solid red;
+}
+
 .custom-margin{
     margin-top: 110px;
     margin-bottom: 50px;
-}
-
-.custom-font{
-    font-family: 'Alata';
-}
-
-.navbar{
-    font-family: 'Alata';
 }
 
 /* social media icons */
@@ -83,7 +84,7 @@
 
 
 /* for mobile devices */
-@media only screen and (max-width: 576px) and (min-width: 275px) {
+@media only screen and (max-width: 450px) and (min-width: 275px) {
     .custom-margin{
         margin-top: 100px;
     }

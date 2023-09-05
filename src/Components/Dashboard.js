@@ -1,7 +1,26 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import Swal from 'sweetalert2'
 
 const Dashboard = () => {
+
+  const success = ()=> {
+    Swal.fire({
+      title: 'Success!',
+      text: 'Do you want to continue',
+      icon: 'success',
+      confirmButtonText: 'ok'
+    })
+  }
+
+  const error = ()=> {
+    Swal.fire({
+      title: 'Error!',
+      text: 'Do you want to continue',
+      icon: 'error',
+      confirmButtonText: 'ok'
+    })
+  }
 
   const [isOpen, setOpen] = useState(false);
   const toggle = () => {
@@ -12,9 +31,9 @@ const Dashboard = () => {
     <div className='container-xxl mt-5'>
       <div className="row">
         <div style={{width: isOpen ? "200px" : "50px" }} className="col-lg-2 col-2 bg-dark sidebar">
-          <div className='d-flex mt-3'>
+          <div className='d-flex mt-3' onClick={toggle}>
             <h5 style={{display: isOpen ? "block" : "none" }}>Dashboard</h5>
-            <i className="fa-solid fa-bars toggle" onClick={toggle}></i>
+            <i className="fa-solid fa-bars toggle"></i>
           </div>
             <ul className=''>
               <li><i className="fa-solid fa-house"></i><Link style={{display: isOpen ? "block" : "none" }} className='link'>Home</Link></li>
@@ -26,6 +45,12 @@ const Dashboard = () => {
               <li><i className="fa-solid fa-building-columns"></i><Link style={{display: isOpen ? "block" : "none" }} className='link'>Payment</Link></li>  
               <li><i className="fa-solid fa-right-to-bracket"></i><Link style={{display: isOpen ? "block" : "none" }} className='link'>Logout</Link></li>  
             </ul>
+        </div>
+
+        {/* testing alert */}
+        <div className="col-lg-10 m-5">
+        <button onClick={success}>Success</button><br /><br />
+        <button onClick={error}>Error</button>
         </div>
       </div>
     </div>

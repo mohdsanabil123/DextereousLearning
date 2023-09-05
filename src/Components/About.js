@@ -24,7 +24,7 @@ const About = () => {
                 <div className="card-body">
                   <div className="d-flex justify-content-between">
                     <h6 className="card-title">Best Community</h6>
-                    <i class="fa-solid fa-chalkboard-user"></i>
+                    <i className="fa-solid fa-chalkboard-user"></i>
                   </div>
                   <p className="card-text">Some quick neque optio distinctio, alias quod nobis saepe nesciunt ducimus</p>
                 </div>
@@ -36,7 +36,7 @@ const About = () => {
                 <div className="card-body">
                 <div className="d-flex justify-content-between">
                   <h6 className="card-title">Proven Results</h6>
-                  <i class="fa-regular fa-thumbs-up"></i>
+                  <i className="fa-regular fa-thumbs-up"></i>
                 </div>
                   <p className="card-text">Some quick neque optio distinctio, alias quod nobis saepe nesciunt ducimus</p>
                 </div>
@@ -48,9 +48,9 @@ const About = () => {
                 <div className="card-body">
                 <div className="d-flex justify-content-between">
                   <h6 className="card-title">Communication</h6>
-                  <i class="fa-solid fa-satellite-dish"></i>
+                  <i className="fa-solid fa-satellite-dish"></i>
                 </div>
-                  <p className="card-text">Communication and social learning nobis saepe nesciunt ducimus</p>
+                  <p className="card-text">Some quick neque optio distinctio, alias quod nobis saepe nesciunt ducimus</p>
                 </div>
               </div>
             </div>
@@ -60,7 +60,7 @@ const About = () => {
                 <div className="card-body">
                 <div className="d-flex justify-content-between">
                   <h6 className="card-title">Computer Education</h6>
-                  <i class="fa-solid fa-computer"></i>
+                  <i className="fa-solid fa-computer"></i>
                   </div>
                   <p className="card-text">Some quick neque optio distinctio, alias quod nobis saepe nesciunt ducimus</p>
                 </div>

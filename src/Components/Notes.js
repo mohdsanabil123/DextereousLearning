@@ -7,7 +7,7 @@ import math from '../Images/math.png'
 const Notes = () => {
     return (
         <>
-        <div className='container my-5'>
+        <div className='container custom-margin'>
             <h2 className='text-center my-5'>All Your Notes Here</h2>
             <div className="row my-3">
                 <div className="col-lg-3 col-md-4 col-sm-6 col-6 mb-3">
