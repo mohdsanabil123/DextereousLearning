@@ -2,22 +2,13 @@ import { useState } from "react";
 import AuthContext from "./authContext";
 
 const AuthProvider = ({children}) => {
-   const[isAuthanticated , setAuthanticated] = useState();
 
-    const loginHandler = () => {
-       setAuthanticated(true);
-    }
+    const[token , setToken] = useState('');
 
-    const logoutHandler=() => {
-        setAuthanticated(false);
-    }
-
-
-   const value = {
-    loginHandler:loginHandler,
-    logoutHandler:logoutHandler,
-    isAuthanticated:!!isAuthanticated
-   }
+   const value = { 
+    setToken:setToken,
+    token:token
+ }
 
     return(
         <AuthContext.Provider value={value}> {children} </AuthContext.Provider>

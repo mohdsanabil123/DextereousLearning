@@ -5,14 +5,14 @@ import Swal from 'sweetalert2'
 const Registration = () => {
 
     const [studentDetails, setStudentDetails] = useState({
-        studentName: "",
-        studentClass: "",
-        schoolName: "",
-        address: "",
-        gender: "",
-        email: "",
+        first_name: "",
+        last_name: "",
+        phone_number: "",
         password: "",
-        phone: ""
+        email: "",
+        address: "",
+        school_name: "",
+        std: ""
     });
 
     const inputHandler = (e) => {
@@ -32,21 +32,21 @@ const Registration = () => {
     async function formHandler(e) {
         e.preventDefault()
         // Validation
-        if (studentDetails.studentName === '') {
+        if (studentDetails.first_name === '') {
             Swal.fire({
                 title: 'Validation error!',
-                text: 'Please Provide Student Name',
+                text: 'Please Enter Your First Name',
                 icon: 'warning',
             })
         }
-        else if (studentDetails.studentClass === '') {
+        else if (studentDetails.std === '') {
             Swal.fire({
                 title: 'Validation error!',
-                text: 'Please Provide Student Class',
+                text: 'Please Enter Student Class',
                 icon: 'warning',
             })
         }
-        else if (studentDetails.schoolName === '') {
+        else if (studentDetails.school_name === '') {
             Swal.fire({
                 title: 'Validation error!',
                 text: 'Please Provide School Name',
@@ -67,23 +67,17 @@ const Registration = () => {
                 icon: 'warning',
             })
         }
-        else if (studentDetails.phone === '') {
+        else if (studentDetails.phone_number === '') {
             Swal.fire({
                 title: 'Validation error!',
                 text: 'Please Provide Unique phone number',
                 icon: 'warning',
             })
         }
-        else if (studentDetails.gender === '') {
-            Swal.fire({
-                title: 'Validation error!',
-                text: 'Please Choose your gender',
-                icon: 'warning',
-            })
-        }
+        
         else {
             try {
-                await axios.post("http://127.0.0.1:8000/api/students/", studentDetails)
+                await axios.post("http://127.0.0.1:8000/api/users/", studentDetails)
                 Swal.fire({
                     title: 'Registration Successful!',
                     text: 'You have successfully created your account',
@@ -101,7 +95,6 @@ const Registration = () => {
         }
     }
 
-    // console.log(studentDetails)
 
     return (
         <div className='container custom-margin'>
@@ -110,43 +103,38 @@ const Registration = () => {
                 <h6 className="mt-0 text-center"><span className='text-danger'>Dextereous</span> Learning</h6>
                     <h2 className="my-3 text-center">Student Registration</h2>
                     <form>
+                        <div className="row">
+                            <div className="col-md-6 mt-md-0 mt-3">
+                                <label>First Name</label>
+                                <input type="text" name="first_name" className="form-control" onChange={inputHandler} />
+                            </div>
+                            <div className="col-md-6 mt-md-0 mt-3">
+                                <label>Last Name</label>
+                                <input type="text" name="last_name" className="form-control" onChange={inputHandler} />
+                            </div>
+                        </div>
                         <div className="form-group">
-                            <label>Student Full Name</label>
-                            <input type="text" name="studentName" className="form-control" onChange={inputHandler} />
+                            <label>Phone Number</label>
+                            <input type="text" name="phone_number" className="form-control" onChange={inputHandler} />
                         </div>
                         <div className="row">
-                            <div className="col-md-6 mt-md-0 mt-3">
-                                <label>Phone</label>
-                                <input type="text" name="phone" className="form-control" onChange={inputHandler} />
-                            </div>
-                            <div className="col-md-6 mt-md-0 mt-3">
-                                <label>Gender</label>
-                                <select name="gender" className="form-select" onChange={inputHandler}>
-                                    <option value=''>Choose gender</option>
-                                    <option>Male</option>
-                                    <option>Female</option>
-                                    <option>Other</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div className="row">
-                            <div className="col-md-6 mt-md-0 mt-3">
-                                <label>Email</label>
-                                <input type="email" name="email" className="form-control" onChange={inputHandler} />
-                            </div>
                             <div className="col-md-6 mt-md-0 mt-3">
                                 <label>Password</label>
                                 <input type="password" name="password" className="form-control" autoComplete="current-password" onChange={inputHandler} />
+                            </div>
+                            <div className="col-md-6 mt-md-0 mt-3">
+                                <label>Email</label>
+                                <input type="email" name="email" className="form-control" onChange={inputHandler} />
                             </div>
                         </div>
                         <div className="row">
                             <div className="col-md-6 mt-md-0 mt-3">
                                 <label>School</label>
-                                <input type="text" name="schoolName" className="form-control" onChange={inputHandler} />
+                                <input type="text" name="school_name" className="form-control" onChange={inputHandler} />
                             </div>
                             <div className="col-md-6 mt-md-0 mt-3">
                                 <label>Class</label>
-                                <select name="studentClass" className="form-select" onChange={inputHandler}>
+                                <select name="std" className="form-select" onChange={inputHandler}>
                                     <option value=''>Choose class</option>
                                     <option>1st</option>
                                     <option>2nd</option>

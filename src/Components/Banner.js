@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import banner from '../Images/banner.jpg'
 // import AuthContext from '../store/authContext'
 const Banner = () => {
