@@ -1,11 +1,8 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import image from '../Images/team-1.jpg'
 import { Link } from 'react-router-dom'
 
-import { AuthContext } from '../Contexts/AuthContext'
-
 const Team = () => {
-const { token } = useContext(AuthContext)
   return (
     <div className='container custom-margin'>
             <div className="row my-3 text-center">
@@ -70,8 +67,6 @@ const { token } = useContext(AuthContext)
                     </div>
                 </div>
                 </div>
-                
-                <h1>{token}</h1>
             </div>
     </div>
   )

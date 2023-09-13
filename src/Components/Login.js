@@ -1,12 +1,13 @@
-import React, { useState, useContext } from 'react'
+import React, { useState } from 'react'
 import axios from 'axios'
 import Swal from 'sweetalert2'
-import { AuthContext } from '../Contexts/AuthContext'
-// import { useNavigate } from 'react-router-dom'
+// import { AuthContext } from '../Contexts/AuthContext'
+import { useNavigate } from 'react-router-dom'
 
 const Login = () => {
-  // const navigate = useNavigate();  
-  const { setToken } = useContext(AuthContext)
+  const navigate = useNavigate();
+
+  // const { setToken } = useContext(AuthContext);
 
   const [credential, setCredential] = useState({
     phone_number: "",
@@ -20,7 +21,7 @@ const Login = () => {
     })
   }
 
-  const formHandler = async (e) => {
+  const FormHandler = async (e) => {
     e.preventDefault()
     // Validation
     if (credential.phone_number === '') {
@@ -44,8 +45,10 @@ const Login = () => {
           "username": credential.phone_number,
           "password": credential.password
         })
-        setToken(res.data.token)
-        // console.log(res.data.token)
+        const token = await (res.data.token)
+        localStorage.setItem('token', token)
+      
+        navigate('/')
       } 
       catch (error) {
         Swal.fire({
@@ -67,7 +70,7 @@ const Login = () => {
                     </div> */}
                     <h6 className="mt-2 mb-4 text-center"><span className='text-danger'>Dextereous</span> Learning</h6>
                     <h2 className="my-3 text-center">Login</h2>
-                    <form onSubmit={formHandler}>
+                    <form onSubmit={FormHandler}>
                         <div className="form-group">
                             <label>Phone Number</label>
                             <input type="tel" name="phone_number" pattern="[6-9]{1}[0-9]{9}" required className="form-control" autoComplete="on" onChange={inputHandler}/>

@@ -1,7 +1,15 @@
 import React from "react";
 import { NavLink, Link } from "react-router-dom";
-import avatar from '../Images/studentlogo.png'
+// import avatar from '../Images/studentlogo.png'
+import { useNavigate } from 'react-router-dom'
+
 const Navbar = () => {
+  const navigate = useNavigate();
+  const handleLogout = () => {
+    localStorage.removeItem('token')
+    navigate('/login')
+  }
+  
   return (
     <div>
       <nav className="navbar navbar-expand-lg fixed-top bg-light">
@@ -45,14 +53,16 @@ const Navbar = () => {
                   Team
                 </NavLink>
               </li>
+
+              { ! localStorage.getItem('token') ?
+              <li className="nav-item"><NavLink className="nav-link" to="/Login">Login</NavLink></li>:
+              <li className="nav-item"><Link className="nav-link" onClick={handleLogout}>Logout</Link></li>
+              }
+              
+              {/* <>
               <li className="nav-item">
-                <NavLink className="nav-link" to="/login">
-                  Login
-                </NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink className="nav-link" to="/registration">
-                  Registration
+                <NavLink className="nav-link" to="/dashboard">
+                  Dashboard
                 </NavLink>
               </li>
               <div className="dropdown">
@@ -90,6 +100,21 @@ const Navbar = () => {
                   </li>
                 </ul>
               </div>
+              </>
+               
+               <>
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/registration">
+                Registration
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/login">
+                  Login
+                </NavLink>
+              </li> 
+              </> */}
+              
             </ul>
           </div>
         </div>
