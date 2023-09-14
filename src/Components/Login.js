@@ -47,7 +47,13 @@ const Login = () => {
         })
         const token = await (res.data.token)
         localStorage.setItem('token', token)
-      
+        Swal.fire({
+          position: 'top-end',
+          icon: 'success',
+          title: 'Successfully Logged In',
+          showConfirmButton: false,
+          timer: 1500
+        })
         navigate('/')
       } 
       catch (error) {
@@ -65,9 +71,6 @@ const Login = () => {
       <div className="col-lg-4 mx-auto border rounded">
                 <div className="col-lg-10 mx-auto p-3">
                     
-                    {/* <div className="row">
-                      <img src={logo} className='col-6 mx-auto' alt="" />
-                    </div> */}
                     <h6 className="mt-2 mb-4 text-center"><span className='text-danger'>Dextereous</span> Learning</h6>
                     <h2 className="my-3 text-center">Login</h2>
                     <form onSubmit={FormHandler}>

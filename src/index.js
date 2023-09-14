@@ -1,4 +1,6 @@
 import "bootstrap/dist/css/bootstrap.min.css";
+import 'bootstrap/dist/js/bootstrap.js';
+
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
@@ -12,6 +14,8 @@ import Login from './Components/Login';
 import About from './Components/About';
 import Contact from './Components/Contact';
 import Dashboard from './Components/Dashboard';
+// import Profile from "./Components/Profile";
+// import FeeDash from "./Components/FeeDash";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
@@ -51,8 +55,8 @@ const router = createBrowserRouter([
         element: <Contact/>
       },
       {
-        path: '/dashboard',
-        element: <Dashboard/>
+        path: '/dashboard/*',        // Add * to make parent. 
+        element: <Dashboard/>,
       }
     ] 
   }

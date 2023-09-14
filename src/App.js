@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
 import { AuthContext } from "./Contexts/AuthContext";
@@ -6,10 +6,8 @@ import { Outlet } from "react-router-dom";
 
 function App() {
   
-  const [ token, setToken ] = useState(null);
-  
   return (
-    <AuthContext.Provider value={{token, setToken}}>
+    <AuthContext.Provider value={{}}>
       <div className="container-xxxl">
         <Navbar />
         <Outlet/>

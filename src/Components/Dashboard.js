@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, Routes, Route } from 'react-router-dom'
 import FeeDash from './FeeDash';
+import Profile from './Profile';
 // import CardPlaceholder from './CardPlaceholder';
 
 const Dashboard = () => {
@@ -20,9 +21,9 @@ const Dashboard = () => {
           </div>
             <ul className=''>
               <li><i className="fa-solid fa-house"></i><Link style={{display: isOpen ? "block" : "none" }} className='link'>Home</Link></li>
-              <li><i className="fa-solid fa-list"></i> <Link style={{display: isOpen ? "block" : "none" }} className='link'>Fees</Link></li>
+              <li><i className="fa-solid fa-user"></i> <Link style={{display: isOpen ? "block" : "none" }} to='/dashboard/profile' className='link'>Profile</Link></li>
+              <li><i className="fa-solid fa-list"></i> <Link style={{display: isOpen ? "block" : "none" }} to='/dashboard/fees' className='link'>Fees</Link></li>
               <li><i className="fa-solid fa-chart-line"></i> <Link style={{display: isOpen ? "block" : "none" }} className='link'>Analytics</Link></li>
-              <li><i className="fa-solid fa-user"></i> <Link style={{display: isOpen ? "block" : "none" }} className='link'>Account</Link></li>
               <li><i className="fa-solid fa-gear"></i><Link style={{display: isOpen ? "block" : "none" }} className='link'>Settings</Link></li>
               <li><i className="fa-solid fa-calendar-days"></i><Link style={{display: isOpen ? "block" : "none" }} className='link'>Events</Link></li>  
               <li><i className="fa-solid fa-building-columns"></i><Link style={{display: isOpen ? "block" : "none" }} className='link'>Payment</Link></li>  
@@ -31,7 +32,13 @@ const Dashboard = () => {
         </div>
 
         <div className='col-lg-10 col-10 mx-auto'>
-          <FeeDash />
+         <Routes>
+          <Route path='/fees' 
+          element={<FeeDash/>} />
+
+          <Route path='/profile' 
+          element={<Profile/>} />
+         </Routes>
         </div>
         
       </div>

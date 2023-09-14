@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 import Swal from 'sweetalert2'
+import { useNavigate } from 'react-router-dom';
 
 const Registration = () => {
-
+    const navigate = useNavigate();
     const [studentDetails, setStudentDetails] = useState({
         first_name: "",
         last_name: "",
@@ -82,8 +83,10 @@ const Registration = () => {
                     title: 'Registration Successful!',
                     text: 'You have successfully created your account',
                     icon: 'success',
+                    timer: 1500,
                     confirmButtonText: 'ok'
                 })
+                navigate('/login')
     
             } catch (error) {
                 Swal.fire({
@@ -115,7 +118,7 @@ const Registration = () => {
                         </div>
                         <div className="form-group">
                             <label>Phone Number</label>
-                            <input type="text" name="phone_number" className="form-control" onChange={inputHandler} />
+                            <input type="tel" name="phone_number" pattern="[6-9]{1}[0-9]{9}" required className="form-control" onChange={inputHandler} />
                         </div>
                         <div className="row">
                             <div className="col-md-6 mt-md-0 mt-3">
