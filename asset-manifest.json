@@ -1,22 +1,23 @@
 {
   "files": {
-    "main.css": "/DextereousLearning/static/css/main.27ed5252.css",
-    "main.js": "/DextereousLearning/static/js/main.1c55a152.js",
-    "static/js/787.2eaf7baa.chunk.js": "/DextereousLearning/static/js/787.2eaf7baa.chunk.js",
-    "static/media/about.jpg": "/DextereousLearning/static/media/about.19d23f46ff49e3a4ac57.jpg",
-    "static/media/banner.jpg": "/DextereousLearning/static/media/banner.e3016554171dfe37dae7.jpg",
-    "static/media/note.png": "/DextereousLearning/static/media/note.951e3f3c556af936f37d.png",
-    "static/media/math.png": "/DextereousLearning/static/media/math.c01aee98badf7b68c4dc.png",
-    "static/media/physics.png": "/DextereousLearning/static/media/physics.a83a9b5b20a9e19d79d9.png",
-    "static/media/Chemistry.png": "/DextereousLearning/static/media/Chemistry.7fcdf1b7aefbf68a74ba.png",
-    "static/media/team-1.jpg": "/DextereousLearning/static/media/team-1.8a9a675dfa533bd205a3.jpg",
-    "index.html": "/DextereousLearning/index.html",
-    "main.27ed5252.css.map": "/DextereousLearning/static/css/main.27ed5252.css.map",
-    "main.1c55a152.js.map": "/DextereousLearning/static/js/main.1c55a152.js.map",
-    "787.2eaf7baa.chunk.js.map": "/DextereousLearning/static/js/787.2eaf7baa.chunk.js.map"
+    "main.css": "/static/css/main.77a40ccf.css",
+    "main.js": "/static/js/main.c4ee9ea7.js",
+    "static/js/787.2eaf7baa.chunk.js": "/static/js/787.2eaf7baa.chunk.js",
+    "static/media/note.png": "/static/media/note.951e3f3c556af936f37d.png",
+    "static/media/about.jpg": "/static/media/about.c31dab18fe31af3ad334.jpg",
+    "static/media/math.png": "/static/media/math.c01aee98badf7b68c4dc.png",
+    "static/media/banner.jpg": "/static/media/banner.feeeddd5cf9ad05e0275.jpg",
+    "static/media/physics.png": "/static/media/physics.a83a9b5b20a9e19d79d9.png",
+    "static/media/Chemistry.png": "/static/media/Chemistry.7fcdf1b7aefbf68a74ba.png",
+    "static/media/Chasing blocks.gif": "/static/media/Chasing blocks.2e7de2e4879d19b3ca91.gif",
+    "static/media/profile.jpg": "/static/media/profile.ad38de8644c77bd68c66.jpg",
+    "index.html": "/index.html",
+    "main.77a40ccf.css.map": "/static/css/main.77a40ccf.css.map",
+    "main.c4ee9ea7.js.map": "/static/js/main.c4ee9ea7.js.map",
+    "787.2eaf7baa.chunk.js.map": "/static/js/787.2eaf7baa.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.27ed5252.css",
-    "static/js/main.1c55a152.js"
+    "static/css/main.77a40ccf.css",
+    "static/js/main.c4ee9ea7.js"
   ]
 }
