@@ -2,6 +2,11 @@ body {
   font-family: cursive;
 }
 
+.navbar-toggler{
+  padding: 0;
+  border: 0;
+}
+
 .active{
   font-weight: bold;
   border-bottom: 2px solid red;
@@ -9,7 +14,7 @@ body {
 
 .custom-margin{
     margin-top: 110px;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
 }
 
 /* social media icons */

@@ -21,7 +21,7 @@ const Dashboard = () => {
           </div>
             <ul className=''>
               <li><i className="fa-solid fa-house"></i><Link style={{display: isOpen ? "block" : "none" }} className='link'>Home</Link></li>
-              <li><i className="fa-solid fa-user"></i> <Link style={{display: isOpen ? "block" : "none" }} to='/dashboard/profile' className='link'>Profile</Link></li>
+              <li><i className="fa fa-user-circle" aria-hidden="true"></i> <Link style={{display: isOpen ? "block" : "none" }} to='/dashboard/profile' className='link'>Profile</Link></li>
               <li><i className="fa-solid fa-list"></i> <Link style={{display: isOpen ? "block" : "none" }} to='/dashboard/fees' className='link'>Fees</Link></li>
               <li><i className="fa-solid fa-chart-line"></i> <Link style={{display: isOpen ? "block" : "none" }} className='link'>Analytics</Link></li>
               <li><i className="fa-solid fa-gear"></i><Link style={{display: isOpen ? "block" : "none" }} className='link'>Settings</Link></li>

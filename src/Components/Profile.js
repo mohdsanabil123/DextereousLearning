@@ -2,10 +2,12 @@ import React, { useEffect, useState } from 'react'
 import profile from '../Images/profile.jpg'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
+import Loader from './Placeholders/Loader'
 
 const Profile = () => {
 
   const [ user, setUser ] = useState({});               // Now using useState() and later we will use context api.
+  const [ loading, setLoading ] = useState(true);
 
   const navigate = useNavigate();
   
@@ -15,18 +17,19 @@ const Profile = () => {
     } else {
       navigate('/login')
     }
-  }, [])
-  
+  }, []);
+
   const getUserProfile = async () => {
-    // const token = localStorage.getItem('token')
+    setLoading(true)
     try {
-      const user = await axios.get("http://127.0.0.1:8000/api/profile/", {
+      const user = await axios.get(`http://mohdsanabil.pythonanywhere.com/api/profile/`, {
         headers:{
           "Content-Type": "text/json",
           "Authorization": localStorage.getItem('token')
       }
     })
     setUser(user.data);
+    setLoading(false);
 
     } catch (error) {
       console.log("Somethong is wrong!")
@@ -43,6 +46,8 @@ const Profile = () => {
               </div>
             </div>
           </div>
+
+          {loading ? <Loader /> : 
 
           <div className="row my-2">
             <div className="col-lg-4">
@@ -125,6 +130,8 @@ const Profile = () => {
               </div>
             </div>
           </div>
+          }
+          
         </div>
       </div>
   )

@@ -4,6 +4,7 @@ import Swal from 'sweetalert2'
 import { useNavigate } from 'react-router-dom';
 
 const Registration = () => {
+
     const navigate = useNavigate();
     const [studentDetails, setStudentDetails] = useState({
         first_name: "",
@@ -78,7 +79,7 @@ const Registration = () => {
         
         else {
             try {
-                await axios.post("http://127.0.0.1:8000/api/users/", studentDetails)
+                await axios.post( `http://mohdsanabil.pythonanywhere.com/api/users/`, studentDetails )
                 Swal.fire({
                     title: 'Registration Successful!',
                     text: 'You have successfully created your account',

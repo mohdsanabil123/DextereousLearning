@@ -14,8 +14,6 @@ import Login from './Components/Login';
 import About from './Components/About';
 import Contact from './Components/Contact';
 import Dashboard from './Components/Dashboard';
-// import Profile from "./Components/Profile";
-// import FeeDash from "./Components/FeeDash";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 

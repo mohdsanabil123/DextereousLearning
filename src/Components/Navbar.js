@@ -2,11 +2,23 @@ import React from "react";
 import { NavLink, Link } from "react-router-dom";
 import avatar from '../Images/profile.jpg'
 import { useNavigate } from 'react-router-dom'
+import { toast } from 'react-toastify';
+
 
 const Navbar = () => {
   const navigate = useNavigate();
   const handleLogout = () => {
     localStorage.removeItem('token')
+    toast('Logged out!', {
+      position: "top-right",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      });
     navigate('/login')
   }
   
@@ -26,7 +38,7 @@ const Navbar = () => {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span className="navbar-toggler-icon"></span>
+            <i className="fa-solid fa-bars-staggered"></i>
           </button>
           <div
             className="collapse navbar-collapse justify-content-end"
