@@ -1,23 +1,25 @@
 {
   "files": {
-    "main.css": "/static/css/main.77a40ccf.css",
-    "main.js": "/static/js/main.c4ee9ea7.js",
-    "static/js/787.2eaf7baa.chunk.js": "/static/js/787.2eaf7baa.chunk.js",
-    "static/media/note.png": "/static/media/note.951e3f3c556af936f37d.png",
-    "static/media/about.jpg": "/static/media/about.c31dab18fe31af3ad334.jpg",
-    "static/media/math.png": "/static/media/math.c01aee98badf7b68c4dc.png",
-    "static/media/banner.jpg": "/static/media/banner.feeeddd5cf9ad05e0275.jpg",
-    "static/media/physics.png": "/static/media/physics.a83a9b5b20a9e19d79d9.png",
-    "static/media/Chemistry.png": "/static/media/Chemistry.7fcdf1b7aefbf68a74ba.png",
-    "static/media/Chasing blocks.gif": "/static/media/Chasing blocks.2e7de2e4879d19b3ca91.gif",
-    "static/media/profile.jpg": "/static/media/profile.ad38de8644c77bd68c66.jpg",
-    "index.html": "/index.html",
-    "main.77a40ccf.css.map": "/static/css/main.77a40ccf.css.map",
-    "main.c4ee9ea7.js.map": "/static/js/main.c4ee9ea7.js.map",
-    "787.2eaf7baa.chunk.js.map": "/static/js/787.2eaf7baa.chunk.js.map"
+    "main.css": "/DextereousLearning/static/css/main.077f68c9.css",
+    "main.js": "/DextereousLearning/static/js/main.f12966ef.js",
+    "static/js/787.2eaf7baa.chunk.js": "/DextereousLearning/static/js/787.2eaf7baa.chunk.js",
+    "static/media/about.jpg": "/DextereousLearning/static/media/about.c31dab18fe31af3ad334.jpg",
+    "static/media/sanabil-img.jpg": "/DextereousLearning/static/media/sanabil-img.d66e3b7937fa785da5cb.jpg",
+    "static/media/banner.jpg": "/DextereousLearning/static/media/banner.feeeddd5cf9ad05e0275.jpg",
+    "static/media/biology.gif": "/DextereousLearning/static/media/biology.6e0c2b5d4aaf2b5b5087.gif",
+    "static/media/Chemistry.gif": "/DextereousLearning/static/media/Chemistry.00b4ead24cb07780ca80.gif",
+    "static/media/math.gif": "/DextereousLearning/static/media/math.80d47127e716a9422fd2.gif",
+    "static/media/shamail-img.jpeg": "/DextereousLearning/static/media/shamail-img.bc243c0790b81daf966f.jpeg",
+    "static/media/physics.gif": "/DextereousLearning/static/media/physics.bef42936740a8d62ba0b.gif",
+    "static/media/Chasing blocks.gif": "/DextereousLearning/static/media/Chasing blocks.2e7de2e4879d19b3ca91.gif",
+    "static/media/profile.jpg": "/DextereousLearning/static/media/profile.ad38de8644c77bd68c66.jpg",
+    "index.html": "/DextereousLearning/index.html",
+    "main.077f68c9.css.map": "/DextereousLearning/static/css/main.077f68c9.css.map",
+    "main.f12966ef.js.map": "/DextereousLearning/static/js/main.f12966ef.js.map",
+    "787.2eaf7baa.chunk.js.map": "/DextereousLearning/static/js/787.2eaf7baa.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.77a40ccf.css",
-    "static/js/main.c4ee9ea7.js"
+    "static/css/main.077f68c9.css",
+    "static/js/main.f12966ef.js"
   ]
 }
