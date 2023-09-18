@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/DextereousLearning/static/css/main.86c1bbc6.css",
-    "main.js": "/DextereousLearning/static/js/main.121e8ccc.js",
+    "main.js": "/DextereousLearning/static/js/main.a3f85359.js",
     "static/js/787.2eaf7baa.chunk.js": "/DextereousLearning/static/js/787.2eaf7baa.chunk.js",
     "static/media/about.jpg": "/DextereousLearning/static/media/about.c31dab18fe31af3ad334.jpg",
     "static/media/sanabil-img.jpg": "/DextereousLearning/static/media/sanabil-img.d66e3b7937fa785da5cb.jpg",
@@ -15,11 +15,11 @@
     "static/media/profile.jpg": "/DextereousLearning/static/media/profile.ad38de8644c77bd68c66.jpg",
     "index.html": "/DextereousLearning/index.html",
     "main.86c1bbc6.css.map": "/DextereousLearning/static/css/main.86c1bbc6.css.map",
-    "main.121e8ccc.js.map": "/DextereousLearning/static/js/main.121e8ccc.js.map",
+    "main.a3f85359.js.map": "/DextereousLearning/static/js/main.a3f85359.js.map",
     "787.2eaf7baa.chunk.js.map": "/DextereousLearning/static/js/787.2eaf7baa.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.86c1bbc6.css",
-    "static/js/main.121e8ccc.js"
+    "static/js/main.a3f85359.js"
   ]
 }
