@@ -17,12 +17,12 @@ const Profile = () => {
     } else {
       navigate('/login')
     }
-  }, []);
+  }, [navigate]);
 
   const getUserProfile = async () => {
     setLoading(true)
     try {
-      const user = await axios.get(`http://mohdsanabil.pythonanywhere.com/api/profile/`, {
+      const user = await axios.get(`${process.env.REACT_APP_API_URL}/profile/`, {
         headers:{
           "Content-Type": "text/json",
           "Authorization": localStorage.getItem('token')

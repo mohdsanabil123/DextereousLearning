@@ -6,7 +6,6 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 
-import Notes from './Components/Notes';
 import Team from './Components/Team';
 import Registration from './Components/Registration';
 import Home from './Components/Home';
@@ -14,6 +13,7 @@ import Login from './Components/Login';
 import About from './Components/About';
 import Contact from './Components/Contact';
 import Dashboard from './Components/Dashboard';
+import NotesPage from "./Components/NotesPage";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
@@ -21,39 +21,51 @@ import reportWebVitals from './reportWebVitals';
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: 'DextereousLearning',
     element: <App/>,
     children: [
       {
-        path: '/',
+        path: '/DextereousLearning/',
         element: <Home/>
       },
       {
-        path: '/team',
+        path: '/DextereousLearning/team',
         element: <Team/>
       },
       {
-        path: '/notes',
-        element: <Notes/>
-      },
-      {
-        path: '/registration',
+        path: '/DextereousLearning/registration',
         element: <Registration/>
       },
       {
-        path: '/login',
+        path: '/DextereousLearning/login',
         element: <Login/>
       },
       {
-        path: '/about',
+        path: '/DextereousLearning/about',
         element: <About/>
       },
       {
-        path: '/contact',
+        path: '/DextereousLearning/contact',
         element: <Contact/>
       },
       {
-        path: '/dashboard/*',        // Add * to make parent. 
+        path: '/DextereousLearning/Notes/Physics',
+        element: <NotesPage subject='Physics'/>
+      },
+      {
+        path: '/DextereousLearning/Notes/Chemistry',
+        element: <NotesPage subject='Chemistry'/>
+      },
+      {
+        path: '/DextereousLearning/Notes/Biology',
+        element: <NotesPage subject='Biology'/>
+      },
+      {
+        path: '/DextereousLearning/Notes/Math',
+        element: <NotesPage subject='Math'/>
+      },
+      {
+        path: '/DextereousLearning/dashboard/*',        // Add * to make parent. 
         element: <Dashboard/>,
       }
     ] 

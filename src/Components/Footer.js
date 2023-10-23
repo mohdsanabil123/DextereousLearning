@@ -1,17 +1,17 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 const Footer = () => {
     return (
-        <div className="container-xxxl bg-light border-top">
+        <div data-bs-theme="dark" className="container-xxxl border-top" style={{backgroundColor: "#001a33"}}>
             <footer className="py-3 mt-3">
                 <ul className="nav justify-content-center border-bottom pb-3 mb-3">
-                    <li className="nav-item"><Link to="/" className="nav-link px-2 text-muted">Home</Link></li>
-                    <li className="nav-item"><Link to="/about" className="nav-link px-2 text-muted">About</Link></li>
-                    <li className="nav-item"><Link to="/contact" className="nav-link px-2 text-muted">Contact</Link></li>
-                    <li className="nav-item"><Link to="" className="nav-link px-2 text-muted">Pricing</Link></li>
-                    <li className="nav-item"><Link to="" className="nav-link px-2 text-muted">FAQs</Link></li>
+                    <li className="nav-item"><NavLink to="/DextereousLearning" className="nav-link px-2 text-muted">Home</NavLink></li>
+                    <li className="nav-item"><NavLink to="/DextereousLearning/about" className="nav-link px-2 text-muted">About</NavLink></li>
+                    <li className="nav-item"><NavLink to="/DextereousLearning/contact" className="nav-link px-2 text-muted">Contact</NavLink></li>
+                    <li className="nav-item"><NavLink to="" className="nav-link px-2 text-muted">Pricing</NavLink></li>
+                    <li className="nav-item"><NavLink to="" className="nav-link px-2 text-muted">FAQs</NavLink></li>
                 </ul>
-                <p className="text-center text-muted">&copy; 2023 <span className='text-danger'>Dextereous</span> Learning, Inc. All rights reserved.</p>
+                <p className="text-center text-muted">&copy; 2023 <span style={{color: "#FF030D"}}>Dextereous</span> Learning, Inc. All rights reserved.</p>
             </footer>
         </div>
     )

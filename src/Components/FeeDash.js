@@ -1,6 +1,40 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useNavigate } from 'react-router-dom'
+import axios from 'axios'
+import CardPlaceholder from "./Placeholders/CardPlaceholder";
 
 const FeeDash = () => {
+
+  const [ account, setAccount ] = useState();               // Now using useState() and later we will use context api.
+  const [ loading, setLoading ] = useState(true);
+
+  const navigate = useNavigate();
+  
+  useEffect(() => {
+    if (localStorage.getItem('token')) {
+      getUserAccount();
+    } else {
+      navigate('/login')
+    }
+  }, [navigate]);
+
+  const getUserAccount = async () => {
+    setLoading(true)
+    try {
+      const account = await axios.get(`${process.env.REACT_APP_API_URL}/account/`, {
+        headers:{
+          "Content-Type": "text/json",
+          "Authorization": localStorage.getItem('token')
+      }
+    })
+    setAccount(account.data[0]);
+    setLoading(false);
+    
+  } catch (error) {
+    console.log("Somethong is wrong!")
+  }
+}
+
   return (
     <div>
       <div className="row py-4">
@@ -10,7 +44,7 @@ const FeeDash = () => {
           </div>
         </div>
       </div>
-
+      {loading ? <CardPlaceholder/> :
       <div className="row">
         <div className="col-md-4 col-xl-3">
           <div className="card bg-c-blue order-card">
@@ -18,7 +52,7 @@ const FeeDash = () => {
               <h6 className="m-b-20">Account ID</h6>
               <h2 className="text-right">
                 <i className="fa fa-cart-plus f-left"></i>
-                <span>1</span>
+                <span>{account.id}</span>
               </h2>
               <p className="m-b-0">
                 Completed Orders<span className="f-right">351</span>
@@ -33,7 +67,7 @@ const FeeDash = () => {
               <h6 className="m-b-20">Fees Rate</h6>
               <h2 className="text-right">
                 <i className="fa fa-rocket f-left"></i>
-                <span>500</span>
+                <span>{account.fee_rate}</span>
               </h2>
               <p className="m-b-0">
                 Completed Orders<span className="f-right">351</span>
@@ -48,7 +82,7 @@ const FeeDash = () => {
               <h6 className="m-b-20">Due Months</h6>
               <h2 className="text-right">
                 <i className="fa fa-refresh f-left"></i>
-                <span>2</span>
+                <span>{account.due_months}</span>
               </h2>
               <p className="m-b-0">
                 Completed Orders<span className="f-right">351</span>
@@ -63,7 +97,7 @@ const FeeDash = () => {
               <h6 className="m-b-20">Total Fees Due</h6>
               <h2 className="text-right">
                 <i className="fa fa-credit-card f-left"></i>
-                <span>1000</span>
+                <span>{account.total_amount}</span>
               </h2>
               <p className="m-b-0">
                 Completed Orders<span className="f-right">351</span>
@@ -71,9 +105,8 @@ const FeeDash = () => {
             </div>
           </div>
         </div>
-
-
       </div>
+      }
     </div>
   );
 };

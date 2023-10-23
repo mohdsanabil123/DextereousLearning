@@ -47,7 +47,7 @@ const About = () => {
               <div className="card mx-auto" style={{ width: "auto" }}>
                 <div className="card-body">
                 <div className="d-flex justify-content-between">
-                  <h6 className="card-title">Communication</h6>
+                  <h6 className="card-title">Communication Skills</h6>
                   <i className="fa-solid fa-satellite-dish"></i>
                 </div>
                   <p className="card-text">Some quick neque optio distinctio, alias quod nobis saepe nesciunt ducimus</p>

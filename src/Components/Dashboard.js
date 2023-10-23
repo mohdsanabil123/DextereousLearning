@@ -19,17 +19,17 @@ const Dashboard = () => {
             <i className="fa-solid fa-bars toggle"></i>
             <h5 style={{display: isOpen ? "block" : "none" }}>Dashboard</h5>
           </div>
-            <ul className=''>
-              <li><i className="fa-solid fa-house"></i><Link style={{display: isOpen ? "block" : "none" }} className='link'>Home</Link></li>
-              <li><i className="fa fa-user-circle" aria-hidden="true"></i> <Link style={{display: isOpen ? "block" : "none" }} to='/dashboard/profile' className='link'>Profile</Link></li>
-              <li><i className="fa-solid fa-list"></i> <Link style={{display: isOpen ? "block" : "none" }} to='/dashboard/fees' className='link'>Fees</Link></li>
-              <li><i className="fa-solid fa-chart-line"></i> <Link style={{display: isOpen ? "block" : "none" }} className='link'>Analytics</Link></li>
-              <li><i className="fa-solid fa-gear"></i><Link style={{display: isOpen ? "block" : "none" }} className='link'>Settings</Link></li>
-              <li><i className="fa-solid fa-calendar-days"></i><Link style={{display: isOpen ? "block" : "none" }} className='link'>Events</Link></li>  
-              <li><i className="fa-solid fa-building-columns"></i><Link style={{display: isOpen ? "block" : "none" }} className='link'>Payment</Link></li>  
-              <li><i className="fa-solid fa-right-to-bracket"></i><Link style={{display: isOpen ? "block" : "none" }} className='link'>Logout</Link></li>  
+            <ul>
+              <Link className='link' to='/DextereousLearning/dashboard'><li><i className="fa-solid fa-house"></i><div style={{display: isOpen ? "block" : "none" }}>Home</div></li></Link>
+              <Link className='link' to='/DextereousLearning/dashboard/profile'><li><i className="fa fa-user-circle"></i><div style={{display: isOpen ? "block" : "none" }}>Profile</div></li></Link>
+              <Link className='link' to='/DextereousLearning/dashboard/fees'><li><i className="fa-solid fa-list"></i><div style={{display: isOpen ? "block" : "none" }}>Fees</div></li></Link>
+              <Link className='link' to='/DextereousLearning/dashboard/fees'><li><i className="fa-solid fa-chart-line"></i><div style={{display: isOpen ? "block" : "none" }}>Analytics</div></li></Link>
+              <Link className='link' to='/DextereousLearning/dashboard/fees'><li><i className="fa-solid fa-gear"></i><div style={{display: isOpen ? "block" : "none" }}>Settings</div></li></Link>
+              <Link className='link' to='/DextereousLearning/dashboard/fees'><li><i className="fa-solid fa-calendar-days"></i><div style={{display: isOpen ? "block" : "none" }}>Events</div></li></Link>
+              <Link className='link' to='/DextereousLearning/dashboard/fees'><li><i className="fa-solid fa-building-columns"></i><div style={{display: isOpen ? "block" : "none" }}>Payment</div></li></Link>
+              <Link className='link' to='/DextereousLearning/dashboard/fees'><li><i className="fa-solid fa-right-to-bracket"></i><div style={{display: isOpen ? "block" : "none" }}>Logout</div></li></Link>
             </ul>
-        </div>
+          </div>
 
         <div className='col-lg-10 col-10 mx-auto'>
          <Routes>

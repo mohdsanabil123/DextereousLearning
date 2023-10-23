@@ -19,15 +19,15 @@ const Navbar = () => {
       progress: undefined,
       theme: "light",
       });
-    navigate('/login')
+    navigate('/DextereousLearning/login')
   }
   
   return (
     <div>
-      <nav className="navbar navbar-expand-lg fixed-top bg-light">
+      <nav className="navbar navbar-expand-lg fixed-top navbar-dark" style={{backgroundColor: "#001a33"}}>
         <div className="container-fluid mx-lg-2">
-          <Link className="navbar-brand" to="/">
-            <span className="text-danger">Dextereous</span> Learning
+          <Link className="navbar-brand" to="/DextereousLearning">
+            <span style={{color: "#FF030D"}}>Dextereous</span> Learning
           </Link>
           <button
             className="navbar-toggler"
@@ -46,30 +46,25 @@ const Navbar = () => {
           >
             <ul className="navbar-nav mx-lg-5 gap-2">
               <li className="nav-item">
-                <NavLink className="nav-link" aria-current="page" to="/">
-                  Home
-                </NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink className="nav-link" to="/about">
+                <NavLink className="nav-link" to="/DextereousLearning/about">
                   About
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link" to="/contact">
+                <NavLink className="nav-link" to="/DextereousLearning/contact">
                   Contact Us
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link" to="/team">
+                <NavLink className="nav-link" to="/DextereousLearning/team">
                   Team
                 </NavLink>
               </li>
 
               { ! localStorage.getItem('token') ?
               <>
-              <li className="nav-item"><NavLink className="nav-link" to="/registration">Registration</NavLink></li>
-              <li className="nav-item"><NavLink className="nav-link" to="/Login">Login</NavLink></li>
+              <li className="nav-item"><NavLink className="nav-link" to="/DextereousLearning/registration">Registration</NavLink></li>
+              <li className="nav-item"><NavLink className="nav-link" to="/DextereousLearning/login">Login</NavLink></li>
               </>
               :
               <div className="dropdown ms-4">
@@ -90,12 +85,12 @@ const Navbar = () => {
                   aria-labelledby="dropdownMenuButton1"
                 >
                   <li>
-                    <Link className="dropdown-item" to='/dashboard/profile'>
+                    <Link className="dropdown-item" to='/DextereousLearning/dashboard/profile'>
                       My profile
                     </Link>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="/dashboard/fees">
+                    <Link className="dropdown-item" to="/DextereousLearning/dashboard/fees">
                       Dashboard
                     </Link>
                   </li>

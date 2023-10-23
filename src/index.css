@@ -1,5 +1,5 @@
 body {
-  font-family: cursive;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .navbar-toggler{
@@ -7,10 +7,6 @@ body {
   border: 0;
 }
 
-.active{
-  font-weight: bold;
-  border-bottom: 2px solid red;
-}
 
 .custom-margin{
     margin-top: 110px;
@@ -58,7 +54,6 @@ body {
 .sidebar li{
   list-style-type: none;
   display: flex;
-  text-decoration: none;
   padding: 10px 0px;
   margin: 8px 0px;
   padding-left: 14px;
@@ -67,13 +62,17 @@ body {
   text-decoration: none;
   color: #fff;
 }
+.sidebar .link:hover{
+  color: black;
+}
 .sidebar ul li:hover{
   background-color: #3ac1ff;
   border-radius: 5px;
 }
 .sidebar ul li i{
   margin-right: 15px;
-  font-size: large;
+  font-size: larger;
+  color: #fff;
 }
 .toggle{
   margin-left: 12px;
@@ -133,6 +132,15 @@ body {
 /* End card */
 
 /* end Dashboard css*/
+
+.card-footer {
+  background-color: white;
+  border: none;
+  color: brown;
+}
+.note-link{
+  text-decoration: none;
+}
 
 
 /* for mobile devices */

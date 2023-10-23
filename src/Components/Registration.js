@@ -1,11 +1,14 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 import Swal from 'sweetalert2'
+import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
 
 const Registration = () => {
 
+    const [ loading, setLoading ] = useState(false);
     const navigate = useNavigate();
+    
     const [studentDetails, setStudentDetails] = useState({
         first_name: "",
         last_name: "",
@@ -29,6 +32,18 @@ const Registration = () => {
     //         student_picture: e.target.files[0]
     //     })
     // }
+
+    const showLoader = () => {
+        Swal.fire({
+          title: 'Loading...',
+          html: 'Please wait...',
+          allowEscapeKey: false,
+          allowOutsideClick: false,
+          didOpen: () => {
+            Swal.showLoading()
+          }
+        });
+      }
 
 
     async function formHandler(e) {
@@ -79,17 +94,25 @@ const Registration = () => {
         
         else {
             try {
-                await axios.post( `http://mohdsanabil.pythonanywhere.com/api/users/`, studentDetails )
-                Swal.fire({
-                    title: 'Registration Successful!',
-                    text: 'You have successfully created your account',
-                    icon: 'success',
-                    timer: 1500,
-                    confirmButtonText: 'ok'
-                })
-                navigate('/login')
+                setLoading(true);
+                await axios.post( `${process.env.REACT_APP_API_URL}/users/`, studentDetails )
+                setLoading(false);
+                Swal.close();
+                toast.success('Registration Successful!', {
+                    position: "top-right",
+                    autoClose: 2000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: false,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "light",
+                    });
+                navigate('/DextereousLearning/login')
     
             } catch (error) {
+                setLoading(false);
+                Swal.close();
                 Swal.fire({
                     title: 'Error!',
                     text: 'Email or Phone already taken!',
@@ -102,6 +125,7 @@ const Registration = () => {
 
     return (
         <div className='container custom-margin'>
+            { loading && showLoader() }
             <div className="col-lg-5 mx-auto border rounded">
                 <div className="col-lg-10 mx-auto p-3">
                 <h6 className="mt-0 text-center"><span className='text-danger'>Dextereous</span> Learning</h6>
@@ -119,7 +143,7 @@ const Registration = () => {
                         </div>
                         <div className="form-group">
                             <label>Phone Number</label>
-                            <input type="tel" name="phone_number" pattern="[6-9]{1}[0-9]{9}" required className="form-control" onChange={inputHandler} />
+                            <input type="tel" name="phone_number" pattern="[6-9]{1}[0-9]{9}" required className="form-control" autoComplete="off" onChange={inputHandler} />
                         </div>
                         <div className="row">
                             <div className="col-md-6 mt-md-0 mt-3">

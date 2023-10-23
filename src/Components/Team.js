@@ -1,4 +1,6 @@
 import React from 'react'
+import shamail from '../Images/shamail-img.jpeg'
+import sanabil from '../Images/sanabil-img.jpg'
 
 const Team = () => {
     return (
@@ -7,7 +9,7 @@ const Team = () => {
                 <div className="container pt-5">
                     <div className="row d-flex justify-content-center">
                         <div className="col-md-10 col-xl-8 text-center">
-                            <h3 className="fw-bold mb-4">Testimonials</h3>
+                            <h2 className="fw-bold mb-4">Meet Our Highly skilled Tutors</h2>
                             <p className="mb-4 pb-2 mb-md-5 pb-md-0">
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, error amet
                                 numquam iure provident voluptate esse quasi, veritatis totam voluptas nostrum
@@ -21,11 +23,11 @@ const Team = () => {
                             <div className="card">
                                 <div className="card-body py-4 mt-2">
                                     <div className="d-flex justify-content-center mb-4">
-                                        <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(10).webp"
+                                        <img src={shamail}
                                             className="rounded-circle shadow-1-strong" width="100" height="100" alt='Tutor' />
                                     </div>
-                                    <h5 className="font-weight-bold">Teresa May</h5>
-                                    <h6 className="font-weight-bold my-3">Founder at ET Company</h6>
+                                    <h5 className="font-weight-bold">Mohd Shamail</h5>
+                                    <h6 className="font-weight-bold my-3">Founder of Dextereous Learning</h6>
                                     <ul className="list-unstyled d-flex justify-content-center">
                                         <li>
                                             <i className="fas fa-star fa-sm text-warning"></i>
@@ -55,11 +57,11 @@ const Team = () => {
                             <div className="card">
                                 <div className="card-body py-4 mt-2">
                                     <div className="d-flex justify-content-center mb-4">
-                                        <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(15).webp"
+                                        <img src={sanabil}
                                             className="rounded-circle shadow-1-strong" width="100" height="100" alt='Tutor' />
                                     </div>
-                                    <h5 className="font-weight-bold">Maggie McLoan</h5>
-                                    <h6 className="font-weight-bold my-3">Photographer at Studio LA</h6>
+                                    <h5 className="font-weight-bold">Mohd Sanabil</h5>
+                                    <h6 className="font-weight-bold my-3">Co-Founder At Dextereous Learning</h6>
                                     <ul className="list-unstyled d-flex justify-content-center">
                                         <li>
                                             <i className="fas fa-star fa-sm text-warning"></i>
@@ -78,8 +80,8 @@ const Team = () => {
                                         </li>
                                     </ul>
                                     <p className="mb-2">
-                                        <i className="fas fa-quote-left pe-2"></i>Autem, totam debitis suscipit saepe
-                                        sapiente magnam officiis quaerat necessitatibus odio assumenda perferendis
+                                        <i className="fas fa-quote-left pe-2"></i>Full stack developer React Js & Django.
+                                        magnam officiis quaerat necessitatibus odio assumenda perferendis
                                         labore.
                                     </p>
                                 </div>

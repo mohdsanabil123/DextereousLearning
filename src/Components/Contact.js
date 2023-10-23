@@ -7,7 +7,7 @@ const Contact = () => {
         <div className="row">
           <form>
             <div className="mb-5 text-center">
-              <h1>Contact Us</h1>
+              <h2><strong>Contact Us</strong></h2>
             </div>
 
             <div className="mb-3">
