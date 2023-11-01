@@ -49,19 +49,19 @@ const router = createBrowserRouter([
         element: <Contact/>
       },
       {
-        path: '/DextereousLearning/Notes/Physics',
+        path: '/DextereousLearning/Notes/Physics/:sClass',
         element: <NotesPage subject='Physics'/>
       },
       {
-        path: '/DextereousLearning/Notes/Chemistry',
+        path: '/DextereousLearning/Notes/Chemistry/:sClass',
         element: <NotesPage subject='Chemistry'/>
       },
       {
-        path: '/DextereousLearning/Notes/Biology',
+        path: '/DextereousLearning/Notes/Biology/:sClass',
         element: <NotesPage subject='Biology'/>
       },
       {
-        path: '/DextereousLearning/Notes/Math',
+        path: '/DextereousLearning/Notes/Math/:sClass',
         element: <NotesPage subject='Math'/>
       },
       {

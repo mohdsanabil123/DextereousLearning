@@ -13,7 +13,7 @@ const Notes = () => {
             <div className="row my-3 gx-lg-5">
 
                 <div className="col-lg-3 col-md-4 col-sm-6 col-6 mb-3">
-                    <Link className='note-link' to='/DextereousLearning/Notes/Physics'>
+                    <Link className='note-link' to='/DextereousLearning/Notes/Physics/6'>
                     <div className="card mx-auto" style={{ width: "auto" }} >
                         <img src={physics} height='200px' alt="..." />
                         <div className="card-footer text-center fs-5 py-0">Physics</div>
@@ -21,7 +21,7 @@ const Notes = () => {
                     </Link>
                 </div>
                 <div className="col-lg-3 col-md-4 col-sm-6 col-6 mb-3">
-                    <Link className='note-link' to='/DextereousLearning/Notes/Chemistry'>
+                    <Link className='note-link' to='/DextereousLearning/Notes/Chemistry/6'>
                     <div className="card mx-auto" style={{ width: "auto" }} >
                         <img src={chemistry} height='200px' alt="..." />
                         <div className="card-footer text-center fs-5 py-0">Chemistry</div>
@@ -29,7 +29,7 @@ const Notes = () => {
                     </Link>
                 </div>
                 <div className="col-lg-3 col-md-4 col-sm-6 col-6 mb-3">
-                    <Link className='note-link' to='/DextereousLearning/Notes/Biology'>
+                    <Link className='note-link' to='/DextereousLearning/Notes/Biology/6'>
                     <div className="card mx-auto" style={{ width: "auto" }} >
                         <img src={biology} height='200px' alt="..." />
                         <div className="card-footer text-center fs-5 py-0">Biology</div>
@@ -37,7 +37,7 @@ const Notes = () => {
                     </Link>
                 </div>
                 <div className="col-lg-3 col-md-4 col-sm-6 col-6 mb-3">
-                    <Link className='note-link' to='/DextereousLearning/Notes/Math'>
+                    <Link className='note-link' to='/DextereousLearning/Notes/Math/6'>
                     <div className="card mx-auto" style={{ width: "auto" }} >
                         <img src={math} height='200px' alt="..." />
                         <div className="card-footer text-center fs-5 py-0">Mathematics</div>
