@@ -20,18 +20,30 @@ const Registration = () => {
         std: ""
     });
 
+    const [ img, setImg ] = useState(null);
+  
+    const onUploadImg = (event) => {
+      setImg(event.target.files[0])
+  }
+
+    const formData = new FormData();
+
+    formData.append('first_name', studentDetails.first_name)
+    formData.append('last_name', studentDetails.last_name)
+    formData.append('phone_number', studentDetails.phone_number)
+    formData.append('password', studentDetails.password)
+    formData.append('email', studentDetails.email)
+    formData.append('address', studentDetails.address)
+    formData.append('school_name', studentDetails.school_name)
+    formData.append('std', studentDetails.std)
+    formData.append('profile_pic', img)
+
     const inputHandler = (e) => {
         setStudentDetails({
             ...studentDetails,
             [e.target.name]: e.target.value
         })  
     }
-
-    // const inputFileHandler = (e) => {
-    //     setStudentDetails({
-    //         student_picture: e.target.files[0]
-    //     })
-    // }
 
     const showLoader = () => {
         Swal.fire({
@@ -95,12 +107,12 @@ const Registration = () => {
         else {
             try {
                 setLoading(true);
-                await axios.post( `${process.env.REACT_APP_API_URL}/users/`, studentDetails )
+                await axios.post( `${process.env.REACT_APP_API_URL}/api/users/`, formData )
                 setLoading(false);
                 Swal.close();
                 toast.success('Registration Successful!', {
                     position: "top-right",
-                    autoClose: 2000,
+                    autoClose: 1000,
                     hideProgressBar: false,
                     closeOnClick: true,
                     pauseOnHover: false,
@@ -130,7 +142,7 @@ const Registration = () => {
                 <div className="col-lg-10 mx-auto p-3">
                 <h6 className="mt-0 text-center"><span className='text-danger'>Dextereous</span> Learning</h6>
                     <h2 className="my-3 text-center">Student Registration</h2>
-                    <form>
+                    <form onSubmit={formHandler}>
                         <div className="row">
                             <div className="col-md-6 mt-md-0 mt-3">
                                 <label>First Name</label>
@@ -184,13 +196,13 @@ const Registration = () => {
                             <label>Address</label>
                             <input type="text" name="address" className="form-control" onChange={inputHandler} />
                         </div>
-                        {/* <div className="form-group">
+                        <div className="form-group">
                             <label>Profile Photo</label>
-                            <input type="file" name="student_picture" className="form-control" onChange={inputFileHandler}/>
-                        </div> */}
+                            <input type="file" name="student_picture" className="form-control" onChange={onUploadImg}/>
+                        </div>
 
                         <div className="form-group">
-                            <input type="submit" onClick={formHandler} className="btn btn-success form-control my-3" value="Create An Account" />
+                            <input type="submit" className="btn btn-success form-control my-3" value="Create An Account" />
                         </div>
                     </form>
                 </div>

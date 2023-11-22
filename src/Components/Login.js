@@ -68,7 +68,7 @@ const Login = () => {
 
       try {
         setLoading(true);
-        const res = await axios.post(`${process.env.REACT_APP_API_URL}/token-auth/`, {
+        const res = await axios.post(`${process.env.REACT_APP_API_URL}/api/token-auth/`, {
           "username": credential.phone_number,
           "password": credential.password
         })
@@ -78,7 +78,7 @@ const Login = () => {
         localStorage.setItem('token', token)      
         toast.success('Successfully Logged In!', {
           position: "top-right",
-          autoClose: 2000,
+          autoClose: 1000,
           hideProgressBar: false,
           closeOnClick: true,
           pauseOnHover: false,

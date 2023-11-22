@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { NavLink, Link } from "react-router-dom";
 import avatar from '../Images/profile.jpg'
 import { useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify';
+import axios from "axios";
 
 
 const Navbar = () => {
@@ -11,7 +12,7 @@ const Navbar = () => {
     localStorage.removeItem('token')
     toast('Logged out!', {
       position: "top-right",
-      autoClose: 2000,
+      autoClose: 1000,
       hideProgressBar: false,
       closeOnClick: true,
       pauseOnHover: true,
@@ -21,7 +22,32 @@ const Navbar = () => {
       });
     navigate('/DextereousLearning/login')
   }
-  
+
+  const [ user, setUser ] = useState({});               // Now using useState() and later we will use context api.
+
+  const token = localStorage.getItem('token')
+
+  useEffect(()=>{
+    if ( token ) {
+      getUserProfile();
+    }
+  }, [token]);
+
+  const getUserProfile = async () => {
+    try {
+      const user = await axios.get(`${process.env.REACT_APP_API_URL}/api/profile/`, {
+        headers:{
+          "Content-Type": "text/json",
+          "Authorization": localStorage.getItem('token')
+      }
+    })
+    setUser(user.data);
+
+    } catch (error) {
+      console.log("Somethong is wrong!")
+    }
+  }
+
   return (
     <div>
       <nav className="navbar navbar-expand-lg fixed-top navbar-dark" style={{backgroundColor: "#001a33"}}>
@@ -73,9 +99,10 @@ const Navbar = () => {
                   id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"
                 >
                   <img
-                    src={avatar}
+                    src={ user.profile_pic ? `${process.env.REACT_APP_API_URL}/${user.profile_pic}` : avatar }
                     className="rounded-circle my-2"
                     width="25"
+                    height="25"
                     alt="User profile pic"
                     loading="lazy"
                   />

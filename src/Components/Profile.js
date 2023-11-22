@@ -8,7 +8,6 @@ const Profile = () => {
 
   const [ user, setUser ] = useState({});               // Now using useState() and later we will use context api.
   const [ loading, setLoading ] = useState(true);
-
   const navigate = useNavigate();
   
   useEffect(() => {
@@ -22,7 +21,7 @@ const Profile = () => {
   const getUserProfile = async () => {
     setLoading(true)
     try {
-      const user = await axios.get(`${process.env.REACT_APP_API_URL}/profile/`, {
+      const user = await axios.get(`${process.env.REACT_APP_API_URL}/api/profile/`, {
         headers:{
           "Content-Type": "text/json",
           "Authorization": localStorage.getItem('token')
@@ -53,8 +52,8 @@ const Profile = () => {
             <div className="col-lg-4">
               <div className="card mb-4">
                 <div className="card-body text-center">
-                  <img src={profile} alt="avatar"
-                    className="rounded-circle img-fluid" style={{ width: "150px" }} />
+                  <img src={ user.profile_pic ? `${process.env.REACT_APP_API_URL}/${user.profile_pic}`: profile } alt="avatar"   
+                    className="rounded-circle img-fluid" style={{ width: "150px", height: "150px" }} />
                   <h5 className="my-3">{`${user.first_name} ${user.last_name}`}</h5>
                   <p className="text-muted mb-1">{`Class ${user.std}, ${user.school_name ? user.school_name : ''}`}</p>
                   <p className="text-muted mb-4">{`${user.address ? user.address : ''}`}</p>

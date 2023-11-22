@@ -14,14 +14,15 @@ const PdfView = (props) => {
   
   useEffect(() => {
     getNotes();
+    // eslint-disable-next-line
   },[props]);
 
-  const getNotes = async () => {
+  async function getNotes() {
     try {
-      const data = await axios.get(`${process.env.REACT_APP_API_URL}/Notes/${props.subject}/${props.sClass}/`)
-      setNotes(data.data[0])
+      const data = await axios.get(`${process.env.REACT_APP_API_URL}/api/Notes/${props.subject}/${props.sClass}/`);
+      setNotes(data.data[0]);
     } catch {
-      console.log('something went wrong!')
+      console.log('something went wrong!');
     }
   }
 
